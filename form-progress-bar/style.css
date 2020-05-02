@@ -1,3 +1,8 @@
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .amana-progress-bar-wrapper {
   display: flex;
 }
