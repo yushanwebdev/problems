@@ -1,57 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <title>Slick Vertical Text Cut Off Issue</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+	<title>Slick Vertical Text Cut Off Issue - Fixed</title>
+	<meta name="description" content="Slick Vertical text cut off issue fixed">
+	<meta name="author" content="Yushan Fernando">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<style>
 		.slick-vertical {
 			width: 250px;
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+			padding: 23px 0;
+		}
+
+		.slick-list {
+			height: 100% !important;
+		}
+
+		.slick-vertical .slick-slide {
+			border: none;
+		}
+
+		.slick-prev {
+			top: 0;
+		}
+
+		.slick-next {
+			bottom: 0;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 1;
 		}
 	</style>
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
 <body>
-	<div class="slick-vertical" data-slick='{"slidesToShow": 7, "slidesToScroll": 1, "vertical": true}'>
-		<div><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
-		<div><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
-		<div><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
-		<div><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
-		<div><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
-		<div><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
-		<div><span>50% Discount. 100% Rewards.</span></div>
-		<div><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
-		<div><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
-		<div><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
-		<div><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
-		<div><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
-		<div><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
-		<div><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
-		<div><span>50% Discount. 100% Rewards.</span></div>
-		<div><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
-		<div><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
-		<div><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
-		<div><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
-		<div><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
-		<div><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
-		<div><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
-		<div><span>50% Discount. 100% Rewards.</span></div>
-		<div><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
+	<div class="slick-vertical" data-slick='{"slidesToShow": 7, "slidesToScroll": 1, "vertical": true, "infinite": false}'>
+		<div class="slick-vertical-item"><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>50% Discount. 100% Rewards.</span></div>
+		<div class="slick-vertical-item"><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
+		<div class="slick-vertical-item"><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>50% Discount. 100% Rewards.</span></div>
+		<div class="slick-vertical-item"><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
+		<div class="slick-vertical-item"><span>Flash Sale - <strong>Up to 37% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Dorsett Wanchai 3 Wishes – <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Let’s GO for 2 Rooms - <strong>Up to 52% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Early Bird Discount - <strong>Up to 45% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Stay Longer & Save More - <strong>Up to 47% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>Best Suite Deal Ever - <strong>Up to 62% Off</strong></span></div>
+		<div class="slick-vertical-item"><span>50% Discount. 100% Rewards.</span></div>
+		<div class="slick-vertical-item"><span>“My Love from the Star” Local Package - <strong>HK$688nett per night</strong></span></div>
 	</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-  <script>
-  	$(function() {
-  		$('.slick-vertical').slick();
-  	});
-  </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+	<script>
+		$(function() {
+			$('.slick-vertical').on('init', function(event, slick){
+				var heightAll = 0;
+				$.each($('.slick-vertical-item'), function( index, value ) {
+					if(index < 7)
+						heightAll += $(value).outerHeight();
+				});
+				$('.slick-vertical').height(heightAll);
+			});
+			$('.slick-vertical').slick();
+		});
+	</script>
 </body>
 </html>
